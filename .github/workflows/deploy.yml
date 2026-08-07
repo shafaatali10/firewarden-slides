@@ -1,10 +1,12 @@
-# .github/workflows/deploy.yml
 name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Change this to your default branch if it's not 'main'
+      - main
+
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -12,12 +14,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '22'  # Use the version that matches your project requirements
+          node-version: '22'
 
       - name: Install dependencies
         run: npm install
@@ -26,7 +28,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist  # This is the default output directory for Vite builds
+          publish_dir: ./dist
