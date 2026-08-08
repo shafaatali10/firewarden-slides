@@ -9,6 +9,14 @@ import './App.css';
 
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
+import Intro from "./components/01_Intro.jsx";
+import Triangle from "./components/02_FireTriangle.jsx";
+import Scenarios from "./components/03_Scenarios.jsx";
+import Stages from "./components/04_Stages.jsx";
+import Classes from "./components/04_Classes.jsx";
+import Extinguishers from "./components/05_Extinguishers.jsx";
+import PassTechnique from "./components/06_Pass_Technique.jsx";
+import Thankyou from "./components/07_Thankyou.jsx";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -24,15 +32,14 @@ function App() {
             modules={[Navigation, Pagination, Mousewheel, Keyboard]}
             className="mySwiper"
         >
-          <SwiperSlide>Intro</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
+          <SwiperSlide><Intro/></SwiperSlide>
+          <SwiperSlide><Triangle /></SwiperSlide>
+          <SwiperSlide><Scenarios /></SwiperSlide>
+          <SwiperSlide><Stages /></SwiperSlide>
+          <SwiperSlide><Classes /></SwiperSlide>
+          <SwiperSlide><Extinguishers /></SwiperSlide>
+          <SwiperSlide><PassTechnique /></SwiperSlide>
+          <SwiperSlide><Thankyou /></SwiperSlide>
         </Swiper>
       </>
   )

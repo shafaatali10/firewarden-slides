@@ -1,0 +1,110 @@
+.classes-page {
+    --class-ink: #29221e;
+    --class-muted: #75685f;
+    --class-orange: #f36f31;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100%;
+    padding: clamp(1.5rem, 4vw, 3.5rem) clamp(1.25rem, 7vw, 7rem);
+    color: var(--class-ink);
+    background: #fffaf4;
+    text-align: left;
+}
+
+.classes-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    width: min(100%, 900px);
+    margin: 0 auto 1.7rem;
+}
+
+.classes-kicker {
+    margin: 0 0 .35rem;
+    color: var(--class-orange);
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.classes-heading h1,
+.class-details h2 {
+    margin: 0;
+    color: var(--class-ink);
+    font-weight: 800;
+    letter-spacing: -.05em;
+    line-height: .98;
+}
+
+.classes-heading h1 { font-size: clamp(2.3rem, 5vw, 4rem); font-style: italic; }
+.classes-heading > div > p:last-child { margin: .7rem 0 0; color: var(--class-muted); font-size: .9rem; }
+.classes-count { color: var(--class-orange); font-size: 2rem; font-weight: 800; white-space: nowrap; }
+.classes-count span { color: var(--class-muted); font-size: .7rem; font-weight: 600; }
+
+.classes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(.65rem, 1.5vw, 1rem);
+    width: min(100%, 900px);
+    margin: 0 auto;
+}
+
+.class-card {
+    display: grid;
+    grid-template-columns: 52px 1fr auto;
+    align-items: center;
+    gap: .75rem;
+    min-width: 0;
+    padding: .65rem .75rem;
+    border: 1px solid rgba(93, 51, 24, .1);
+    border-radius: .8rem;
+    color: var(--class-ink);
+    background: #fff;
+    box-shadow: 0 .55rem 1.25rem rgba(93, 51, 24, .07);
+    cursor: pointer;
+    text-align: left;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.class-card:hover,
+.class-card--selected { border-color: rgba(243, 111, 49, .6); box-shadow: 0 .7rem 1.5rem rgba(93, 51, 24, .12); transform: translateY(-.15rem); }
+.class-card:focus-visible { outline: 3px solid #4c83c3; outline-offset: 3px; }
+.class-card-image { position: relative; display: grid; width: 52px; height: 52px; place-items: center; overflow: hidden; border-radius: .55rem; background: #f2eee9; }
+.class-card-image img { display: block; width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+.class-card-number { position: absolute; top: .25rem; left: .3rem; color: var(--class-orange); font-size: .55rem; font-weight: 900; letter-spacing: .08em; }
+.class-card-copy { display: grid; min-width: 0; gap: .15rem; }
+.class-card-copy strong { font-size: .95rem; }
+.class-card-copy span { overflow: hidden; color: var(--class-muted); font-size: .68rem; text-overflow: ellipsis; white-space: nowrap; }
+.class-card-link { color: var(--class-orange); font-size: .65rem; font-weight: 800; white-space: nowrap; }
+
+.class-details {
+    display: grid;
+    grid-template-columns: minmax(160px, .7fr) minmax(300px, 1.5fr);
+    align-items: center;
+    gap: clamp(1rem, 3vw, 3rem);
+    width: min(100%, 900px);
+    margin: 1.7rem auto 0;
+    padding: 1.3rem 1.5rem;
+    border: 1px solid rgba(93, 51, 24, .1);
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 .65rem 1.5rem rgba(93, 51, 24, .07);
+    animation: class-details-in .35s ease both;
+}
+
+@keyframes class-details-in { from { opacity: 0; transform: translateY(.5rem); } to { opacity: 1; transform: translateY(0); } }
+.class-details-heading h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
+.class-description { margin: 0; color: var(--class-muted); font-size: .88rem; line-height: 1.5; }
+.class-prompt { width: min(100%, 900px); margin: 1.7rem auto 0; color: var(--class-muted); font-size: .85rem; font-style: italic; text-align: center; }
+
+@media (max-width: 800px) {
+    .classes-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .class-details { grid-template-columns: 1fr; gap: .8rem; }
+}
+
+@media (max-width: 520px) {
+    .classes-count { display: none; }
+    .classes-grid { grid-template-columns: 1fr; }
+}

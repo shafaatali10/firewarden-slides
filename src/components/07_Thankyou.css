@@ -1,0 +1,31 @@
+.thankyou-page {
+    --thanks-ink: #29221e;
+    --thanks-muted: #75685f;
+    --thanks-orange: #f36f31;
+    box-sizing: border-box;
+    display: grid;
+    width: 100%;
+    min-height: 100%;
+    place-items: center;
+    padding: clamp(2rem, 6vw, 5rem) 1.5rem;
+    color: var(--thanks-ink);
+    background: #fffaf4;
+    text-align: center;
+}
+
+.thankyou-content { width: min(100%, 760px); }
+.thankyou-kicker { margin: 0 0 .6rem; color: var(--thanks-orange); font-size: .7rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.thankyou-content h1 { margin: 0; color: var(--thanks-ink); font-size: clamp(3.5rem, 10vw, 7rem); font-style: italic; font-weight: 800; letter-spacing: -.08em; line-height: .85; }
+.thankyou-intro { margin: 1rem 0 2.2rem; color: var(--thanks-muted); font-size: 1rem; }
+.thankyou-quotes { display: grid; gap: .75rem; text-align: left; }
+.thankyou-quote { position: relative; display: grid; grid-template-columns: 2.5rem 1fr auto; align-items: center; gap: .7rem; min-height: 70px; padding: .8rem 1rem; border: 1px solid rgba(93, 51, 24, .1); border-radius: .8rem; color: var(--thanks-muted); background: #fff; box-shadow: 0 .55rem 1.25rem rgba(93, 51, 24, .07); cursor: not-allowed; text-align: left; transition: transform .25s ease, background .25s ease, border-color .25s ease; }
+.thankyou-quote:not(:disabled):hover { border-color: rgba(243, 111, 49, .65); background: #fff3eb; cursor: pointer; transform: translateX(.25rem); }
+.thankyou-quote--visible { color: var(--thanks-ink); background: #fff; }
+.quote-mark { color: var(--thanks-orange); font-family: Georgia, serif; font-size: 2.6rem; line-height: .7; }
+.thankyou-quote > span:nth-child(2) { font-size: 1.1rem; font-weight: 700; }
+.quote-number { color: var(--thanks-orange); font-size: .7rem; font-weight: 900; letter-spacing: .12em; }
+.thankyou-footer { margin: 2.5rem 0 0; color: var(--thanks-muted); font-size: .85rem; font-style: italic; }
+
+@media (max-width: 520px) {
+    .thankyou-quote > span:nth-child(2) { font-size: .95rem; }
+}

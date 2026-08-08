@@ -1,16 +1,23 @@
-# React + Vite
+Part 1 — Understanding Fire
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Fire Triangle
+Ignition
+Growth
+Fully Developed
+Decay
 
-Currently, two official plugins are available:
+Part 2 — Understanding Fire Behavior
+6. Heat Rising
+7. Smoke Layer
+8. Oxygen/Fuel Effect
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Part 3 — Common Hazards
+9. Cooking Fire
+10. Electrical Fire
+11. Overloaded Outlet
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Part 4 — What To Do
+12. Closed/Open Door
+13. Extinguisher Concept
+14. Alarm → Evacuate
+15. Safe Evacuation
