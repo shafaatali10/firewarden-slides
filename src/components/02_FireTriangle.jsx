@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import img from '../assets/tirangle.jpg'
+import img from '../assets/demo.jpg'
 import './02_FireTriangle.css'
 
 const elements = [

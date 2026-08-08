@@ -3,40 +3,40 @@ import './03_Scenarios.css'
 
 const scenarios = [
     {
-        title: 'A suspicious smoke',
+        title: 'A smoky bin',
         text: 'Someone throws a cigarette into a bin. A thin trail of smoke starts to rise.',
-        approach: 'Alert others nearby, keep people away from the bin, and report the smoke immediately. Do not reach into the bin.',
+        approach: 'Alert others nearby, Keep people away from the bin, Try to extinguish the fire',
     },
     {
         title: 'Visible fire',
         text: 'The fire in the bin is now visible. It is small, but growing.',
-        approach: 'Raise the alarm. If trained and it is safe, use the correct extinguisher with a clear escape route behind you. Otherwise, evacuate.',
+        approach: 'Raise the alarm, Turn off the AC, If trained and it is safe - use the correct extinguisher with a clear escape route behind you, Otherwise - evacuate.',
     },
     {
         title: 'Fire and noise',
-        text: 'A room catches fire at a corner of the building. You hear an alarm and people calling out.',
-        approach: 'Stop work, warn anyone in immediate danger, activate the alarm, and move toward the nearest safe exit.',
+        text: 'A room catches fire at some corner. You hear noise from people.',
+        approach: 'Stop work, Warn anyone in immediate danger, Activate the alarm, And move toward the nearest safe exit.',
     },
     {
         title: 'You cannot see the room',
-        text: 'You cannot see the affected room, but smoke is spreading and the noise is getting louder.',
-        approach: 'Treat the situation as an emergency. Stay low if there is smoke, close doors behind you, and never enter to investigate.',
+        text: 'You cannot see the affected room, but you hear the noise from people.',
+        approach: 'Check the gaps of the door for any smoke, Use back of palm to feel the handle, Treat the situation as an emergency, Keep the door closed, Never enter to investigate if you sense definite fire.',
     },
     {
         title: 'Full-blown fire',
         text: 'The fire is now full-blown and spreading quickly through the area.',
-        approach: 'Evacuate immediately using the planned route. Never fight a fire that is spreading or blocking your escape path.',
+        approach: 'Evacuate immediately using the planned route, Never fight a fire that is spreading or blocking your escape path.',
     },
     {
         title: 'Evacuation awareness',
         text: 'The evacuation alarm is active. Everyone needs to move to safety and account for their team.',
-        approach: 'Use the nearest safe exit, do not use lifts, go to the assembly point, and report missing people to the emergency team.',
+        approach: 'Dont leave the door open, Use the nearest safe exit, Do not use lifts, Go to the assembly point, Report missing people to the emergency team.',
     },
 ]
 
 const initialParticipants = [
     'Amol', 'Suchayan', 'Keval', 'Omar', 'Venkatesh',
-    'Justyna', 'Sumit', 'Nitha', 'Vasily'
+    'Justyna', 'Sumit', 'Nitha', 'Vasiliy'
 ]
 
 export default function Scenarios() {
@@ -70,7 +70,7 @@ export default function Scenarios() {
                 <div>
                     <p className="scenarios-kicker">Interactive discussion</p>
                     <h1>What would you do?</h1>
-                    <p>Choose a scenario, turn the card, and talk through the ideal response.</p>
+                    <p>Scenario based learning.</p>
                 </div>
                 <div className="scenario-count">06 <span>scenarios</span></div>
             </header>
@@ -122,7 +122,7 @@ export default function Scenarios() {
                     <div className="participant-panel-heading">
                         <div>
                             <p className="scenarios-kicker">Your turn</p>
-                            <h2>Ask someone</h2>
+                            <h2>Who can answer?</h2>
                         </div>
                         <span className="participant-total">{participants.length}/10</span>
                     </div>
@@ -144,7 +144,7 @@ export default function Scenarios() {
                         })}
                     </div>
                     <p className="participant-instruction">
-                        {selectedParticipant ? `Ask ${selectedParticipant} to respond.` : 'Spin to select the next person.'}
+                        {selectedParticipant ? `${selectedParticipant}` : `Let's spin it!`}
                     </p>
                     <div className="participant-actions">
                         <button className="spin-button" type="button" onClick={chooseParticipant} disabled={isSpinning || participants.length === 0}>
@@ -163,7 +163,13 @@ export default function Scenarios() {
                         <button className="dialog-close" type="button" aria-label="Close ideal approach" onClick={() => setDialogScenario(null)}>×</button>
                         <p className="scenarios-kicker">Ideal approach · 0{dialogScenario + 1}</p>
                         <h2 id="approach-title">{scenarios[dialogScenario].title}</h2>
-                        <p>{scenarios[dialogScenario].approach}</p>
+                        <ul className="approach-list">
+                            {scenarios[dialogScenario].approach
+                                .split(',')
+                                .map((step, index) => (
+                                    <li key={index}>{step.trim()}</li>
+                                ))}
+                        </ul>
                         <button className="dialog-done" type="button" onClick={() => setDialogScenario(null)}>Got it</button>
                     </section>
                 </div>

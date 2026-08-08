@@ -62,7 +62,7 @@
     width: 100%;
     height: auto;
     border-radius: 1rem;
-    box-shadow: 0 1rem 2.5rem rgba(93, 51, 24, .12);
+    /*box-shadow: 0 1rem 2.5rem rgba(93, 51, 24, .12);*/
 }
 
 .glowing-dot {

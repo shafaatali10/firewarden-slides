@@ -81,7 +81,7 @@ export default function Stages() {
                     </div>
                 </section>
             ) : (
-                <p className="stage-prompt">Select a stage above to reveal the response.</p>
+                <p className="stage-prompt"></p>
             )}
         </main>
     )

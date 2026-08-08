@@ -55,7 +55,7 @@ export default function Classes() {
                 <div>
                     <p className="classes-kicker">Know your fire</p>
                     <h1>Classes of Fuel</h1>
-                    <p>Different fuels need different responses. Select a class to learn more.</p>
+                    <p>Different fuels need different responses. We will see how to respond in next slide. </p>
                 </div>
                 <div className="classes-count">06 <span>classes</span></div>
             </header>
@@ -77,7 +77,7 @@ export default function Classes() {
                             <strong>{fuelClass.name}</strong>
                             <span>{fuelClass.label}</span>
                         </span>
-                        <span className="class-card-link">{selectedClass === index ? 'Selected' : 'View class'} <span aria-hidden="true">↗</span></span>
+                        <span className="class-card-link">{selectedClass === index ? '' : ''} <span aria-hidden="true">↗</span></span>
                     </button>
                 ))}
             </section>
