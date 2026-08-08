@@ -96,7 +96,7 @@ export default function Scenarios() {
                                 <span className="scenario-card-face scenario-card-front">
                                     <span className="scenario-number">0{index + 1}</span>
                                     <strong>{scenario.title}</strong>
-                                    <span className="flip-hint">Click to reveal <span aria-hidden="true">↗</span></span>
+                                    <span className="flip-hint"> <span aria-hidden="true"></span></span>
                                 </span>
                                 <span className="scenario-card-face scenario-card-back">
                                     <span className="scenario-number">0{index + 1}</span>
@@ -124,7 +124,7 @@ export default function Scenarios() {
                             <p className="scenarios-kicker">Your turn</p>
                             <h2>Who can answer?</h2>
                         </div>
-                        <span className="participant-total">{participants.length}/10</span>
+                        <span className="participant-total">{participants.length}/9</span>
                     </div>
                     <div className={`participant-wheel ${isSpinning ? 'participant-wheel--spinning' : ''}`} aria-label="Participant selector">
                         <div className="wheel-center">
