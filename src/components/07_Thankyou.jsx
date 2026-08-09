@@ -5,7 +5,7 @@ const quotes = [
     'Only fight when you can.',
     'Share the information.',
     'With great power comes great responsibility.',
-    'Create with care by - Shafaat Khan.',
+    'Created with care by - Shafaat Khan.',
 ]
 
 export default function Thankyou() {
